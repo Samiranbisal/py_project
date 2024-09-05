@@ -1,0 +1,11 @@
+p {
+  width: 10rem;
+  color: aqua;
+}
+h1 {
+  background: gold;
+}
+.img img{
+  width: 300px;
+  border-radius: 10px;
+}

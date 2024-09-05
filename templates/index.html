@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <h1 style="font-size: 7rem; color: blue">{{message}}</h1>
+    <h1>I Am Samiran...!</h1>
+    <h2 style="color: red">My Age is 22</h2>
+    <p style="color: aqua">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus quos
+      dolorum, corporis totam, sapiente non, aperiam voluptatem repellendus eum
+      quas ullam quidem? Non quas velit, sapiente tempore excepturi culpa saepe.
+    </p>
+    <hr />
+    <h3>My Hobbies</h3>
+    <div class="img">
+      <img src="/static/bb.jpg" alt="" />
+      <img src="/static/free-images.avif" alt="" />
+      <img src="/static/hh.webp" alt="" />
+      <img src="/static/SC.webp" alt="" />
+    </div>
+    <ul>
+      <li>Playing Football</li>
+      <li>Playing Cricket</li>
+      <li>Playing Badminton</li>
+    </ul>
+    <hr />
+
+    {% for n in list %}
+    <h3 style="">{{forloop.counter}}. {{n}}</h3>
+    {% endfor %}
+    <hr />
+
+    {% for i in student_Details %}
+    <div>Name: ,{{i.name}} Age: {{i.age}}</div>
+
+    {% endfor %}
+  </body>
+</html>
