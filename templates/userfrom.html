@@ -1,0 +1,32 @@
+{% include 'header.html' %}
+
+<h1>User From</h1>
+<div>
+    <!-- <form action="" method="post" name="">
+        {% csrf_token %}
+        <div>
+            <label for="">Value 1</label>
+            <input type="text" name="nam1" placeholder="Enter username">
+        </div>
+        <div>
+            <label for="">Value 1</label>
+            <input type="text" name="nam2" placeholder="Enter username">
+        </div>
+        <div>
+            <button type="submit">Sava</button>
+        </div>
+        <h1>OUTPUT: </h1>
+        <input type="text" value="{{output}}">
+    </form> -->
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="num1" placeholder="Enter first number">
+        <input type="text" name="num2" placeholder="Enter second number">
+        <button type="submit">Submit</button>
+    </form>
+    
+    <p>Result: {{ output }}</p>
+    
+</div>
+
+{% include 'footer.html' %}

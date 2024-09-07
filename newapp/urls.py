@@ -24,5 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', views.aboutUs),
     path('about/<couseid>', views.couseDetails),
-    path('tatai/', tatai.sb)
+    path('tatai/', tatai.sb),
+    path('aboutus/',views.about),
+    path('from/', views.userform)
 ]

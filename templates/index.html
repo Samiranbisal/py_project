@@ -1,4 +1,10 @@
 {% include 'header.html' %}
+<h1 style="font-size: 7rem; color: blue">{{message}}</h1>
+    <h1>I Am Samiran...!</h1>
+    <h2 style="color: red">My Age is 22</h2>
+    <h3 style="color: green">My Hobbies are Playing Football, Reading Books,
+        Watching Movies</h3>
+
     <p style="color: aqua">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus quos
       dolorum, corporis totam, sapiente non, aperiam voluptatem repellendus eum
@@ -18,5 +24,14 @@
       <li>Playing Badminton</li>
     </ul>
     <hr />
+    {% for n in list %}
+<h3 style="">{{forloop.counter}}. {{n}}</h3>
+{% endfor %}
+<hr />
+
+{% for i in student_Details %}
+<div>Name: ,{{i.name}} Age: {{i.age}}</div>
+
+{% endfor %}
 
 {% include 'footer.html' %}
