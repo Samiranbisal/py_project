@@ -1,8 +1,14 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from .forms import usersfrom
+from services.models import Service
 
 def homepage(requst):
+    serviceData = Service.objects.all()
+    # print(serviceData)
+    data1 = {
+        'serviceData': serviceData
+    }
     data={
         "title":  "Home Page",
         "message": "Welcome to Home Page",
@@ -15,7 +21,7 @@ def homepage(requst):
         ]
         
     }
-    return render(requst, "index.html",data)
+    return render(requst, "index.html",data1)
 
 def about(request):
     return render(request, "about.html")

@@ -20,6 +20,7 @@
     </div>
     <ul>
       <li>Playing Football</li>
+        
       <li>Playing Cricket</li>
       <li>Playing Badminton</li>
     </ul>
@@ -35,3 +36,14 @@
 {% endfor %}
 
 {% include 'footer.html' %}
+<hr>
+<br>
+
+{% for n in serviceData %}
+        <!-- {{n}} -->
+        <div>{{n.services_icon}}</div>
+        <div>{{n.services_title}}</div>
+        <div>{{n.services_das}}</div> 
+        <hr>
+{% endfor %}
+
