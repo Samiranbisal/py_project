@@ -26,5 +26,6 @@ urlpatterns = [
     path('about/<couseid>', views.couseDetails),
     path('tatai/', tatai.sb),
     path('aboutus/',views.about),
-    path('from/', views.userform)
+    path('from/', views.userform),
+    path('newes/<nid>', views.NewsDeatails)
 ]

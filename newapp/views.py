@@ -2,13 +2,21 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from .forms import usersfrom
 from services.models import Service
+from news.models import News
+
+def NewsDeatails(request, nid):
+    NewsDeatails = News.objects.get(id = nid)
+    dataD = {
+        'NewsDeatails': NewsDeatails
+    }
+    return render(request, "NewsDeatails.html", dataD)
 
 def homepage(requst):
+    newsData = News.objects.all()
+    
     serviceData = Service.objects.all()
     # print(serviceData)
-    data1 = {
-        'serviceData': serviceData
-    }
+    
     data={
         "title":  "Home Page",
         "message": "Welcome to Home Page",
@@ -20,6 +28,11 @@ def homepage(requst):
             {"name": "king", "age": 25},
         ]
         
+    }
+    data1 = {
+        'serviceData': serviceData,
+        'newsData': newsData,
+        'data': data
     }
     return render(requst, "index.html",data1)
 

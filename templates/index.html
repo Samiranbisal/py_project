@@ -1,5 +1,22 @@
 {% include 'header.html' %}
 <h1 style="font-size: 7rem; color: blue">{{message}}</h1>
+    <marquee behavior="" direction="">
+      <div>
+        <h2  style="font-size: 2rem; color: red">
+          {% for n in newsData %}
+          {{n.news_title | safe}}
+          <hr>
+          <span onmouseover="stop()" onmouseout="start()" style="color: green">{{n.news_defc | safe}}</span>
+          
+        {% endfor %}
+          
+          <!-- <span style="color: green">Website</span> -->
+          </h2>
+      </div>
+      
+        
+      <!-- <p style="font-size: 2rem; color: red">Welcome to my website -->
+    </marquee>
     <h1>I Am Samiran...!</h1>
     <h2 style="color: red">My Age is 22</h2>
     <h3 style="color: green">My Hobbies are Playing Football, Reading Books,
